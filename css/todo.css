@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.container {
+    width: 360px;
+    background-image: -webkit-radial-gradient(blue,green);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgb(51, 238, 4);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    color:#000000
+}
+
+input {
+    flex: 1;
+    color:#000000;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid yellowgreen;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #000000;
+    color: olivedrab;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #140202cc;
+}
+
+/* Task List Styles */
+#taskList {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    transform: translateY(10px);
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+.task-text {
+    flex: 1;
+    color:#140202;
+    font-weight: bold;
+    margin-left: 8px;
+    word-break: break-word;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rgba(2, 2, 251, 0.627);
+    opacity: 0.9;
+}
+
+.delete-btn {
+    background: #ff0000;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #e53935;
+}
+
+/* Animation for adding tasks */
+@keyframes fadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation for removing tasks */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
